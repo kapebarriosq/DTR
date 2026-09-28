@@ -1,89 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#3b2418">
-  <title>KAPE' BAR-RIO — DTR</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="app">
-    <section id="loginScreen" class="screen">
-      <div class="card login-card">
-        <div class="brand">KAPE' BAR-RIO</div>
-        <div class="subtitle">Daily Time Record</div>
-        <div class="coffee-icon">☕</div>
-        <h1>Barista Login</h1>
-
-        <form id="loginForm">
-          <label for="username">Employee ID</label>
-          <input id="username" type="text" autocomplete="username" placeholder="Enter Employee ID" required>
-
-          <label for="password">Password</label>
-          <input id="password" type="password" autocomplete="current-password" placeholder="Enter Password" required>
-
-          <p id="loginError" class="error"></p>
-          <button class="primary-btn" type="submit">LOG IN</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="dashboardScreen" class="screen hidden">
-      <header class="topbar">
-        <div>
-          <div class="brand small">KAPE' BAR-RIO</div>
-          <div class="subtitle">Daily Time Record</div>
-        </div>
-        <button id="logoutBtn" class="logout-btn">LOG OUT</button>
-      </header>
-
-      <div class="card profile-card">
-        <div class="avatar">JA</div>
-        <div>
-          <h1 id="employeeName">James Arthur Buna</h1>
-          <p id="employeeId">Employee ID: KBR0003</p>
-        </div>
-      </div>
-
-      <div class="card time-card">
-        <div class="date" id="currentDate"></div>
-        <div class="clock" id="currentTime"></div>
-
-        <div id="statusText" class="status">Ready to clock in</div>
-        <div id="clockInDisplay" class="record-line hidden"></div>
-        <div id="clockOutDisplay" class="record-line hidden"></div>
-        <div id="durationDisplay" class="duration hidden"></div>
-
-        <button id="attendanceBtn" class="clock-btn">CLOCK IN</button>
-        <p id="actionMessage" class="message"></p>
-      </div>
-
-      <div class="card history-card">
-        <div class="section-heading">
-          <h2>DTR History</h2>
-          <button id="clearHistoryBtn" class="text-btn">Clear History</button>
-        </div>
-        <div id="historyEmpty" class="empty">No completed DTR records yet.</div>
-        <div class="table-wrap">
-          <table id="historyTable" class="hidden">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Clock In</th>
-                <th>Clock Out</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody id="historyBody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <p class="footer-note">Attendance records are saved on this device.</p>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#3b2418"><meta name="description" content="KAPE' BAR-RIO Daily Time Record">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KAPE' BAR-RIO DTR">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/icon-192.png"><link rel="stylesheet" href="style.css">
+<title>KAPE' BAR-RIO — DTR</title></head><body><main class="app">
+<section id="loginScreen" class="screen"><div class="card login-card"><div class="brand">KAPE' BAR-RIO</div><div class="subtitle">Daily Time Record</div><div class="coffee-icon">☕</div><h1>Barista Login</h1>
+<form id="loginForm"><label>Employee ID</label><input id="username" autocomplete="username" placeholder="Enter Employee ID" required><label>Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Enter Password" required><p id="loginError" class="error"></p><button class="primary-btn">LOG IN</button></form></div></section>
+<section id="dashboardScreen" class="screen hidden"><header class="topbar"><div><div class="brand small">KAPE' BAR-RIO</div><div class="subtitle">Daily Time Record</div></div><button id="logoutBtn" class="logout-btn">LOG OUT</button></header>
+<div class="card profile-card"><div class="avatar">JA</div><div><h1 id="employeeName">James Arthur Buna</h1><p id="employeeId">Employee ID: KBR0003</p></div></div>
+<div class="card time-card"><div id="currentDate" class="date"></div><div id="currentTime" class="clock"></div><div id="statusText" class="status">Ready to clock in</div><div id="clockInDisplay" class="record-line hidden"></div><div id="durationDisplay" class="duration hidden"></div><button id="attendanceBtn" class="clock-btn">CLOCK IN</button><p id="actionMessage" class="message"></p></div>
+<div class="card history-card"><div class="section-heading"><h2>DTR History</h2><button id="clearHistoryBtn" class="text-btn">Clear History</button></div><div id="historyEmpty" class="empty">No completed DTR records yet.</div><div class="table-wrap"><table id="historyTable" class="hidden"><thead><tr><th>Date</th><th>Clock In</th><th>Clock Out</th><th>Total</th></tr></thead><tbody id="historyBody"></tbody></table></div></div>
+<p class="footer-note">Attendance records are saved on this device.</p></section></main><script src="app.js"></script></body></html>
